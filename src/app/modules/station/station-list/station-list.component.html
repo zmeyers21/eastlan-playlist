@@ -1,0 +1,72 @@
+<!-- Station List -->
+<div class="station-list" *ngIf="!loading">
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Business Name Column -->
+    <ng-container matColumnDef="businessName">
+      <th mat-header-cell *matHeaderCellDef> Business Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.businessName}} </td>
+    </ng-container>
+
+    <!-- Address Column -->
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> City </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+    </ng-container>
+
+    <!-- State Column -->
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef> State </th>
+      <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+    </ng-container>
+
+    <!-- Zip Column -->
+    <ng-container matColumnDef="zip">
+      <th mat-header-cell *matHeaderCellDef> Zip </th>
+      <td mat-cell *matCellDef="let element"> {{element.zip}} </td>
+    </ng-container>
+
+    <!-- Phone Column -->
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef> Phone </th>
+      <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status | uppercase}} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="w-150"></th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button class="icon-button" (click)="edit(element)"><mat-icon>edit</mat-icon></button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table-header-row"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="data-row" (click)="rowClick(row)"></tr>
+  </table>
+
+</div>
+
+<div class="loader-container">
+  <img class="loader" src="/assets/images/loading.gif" *ngIf="loading">
+</div>

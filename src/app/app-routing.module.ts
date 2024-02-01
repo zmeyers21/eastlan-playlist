@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },
   { path: 'stations', loadChildren: () => import('./modules/station/station.module').then(m => m.StationModule) },
   { path: 'playlist', loadChildren: () => import('./modules/playlist/playlist.module').then(m => m.PlaylistModule) },
+  { path: 'artists', loadChildren: () => import('./modules/artist/artist.module').then(m => m.ArtistModule) },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
 

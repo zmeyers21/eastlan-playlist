@@ -28,7 +28,8 @@ export class HeaderComponent {
 
     this.tabs$ = [
       { title: 'home', route: 'dashboard' },
-      { title: 'stations', route: 'stations' }
+      { title: 'stations', route: 'stations' },
+      { title: 'artists', route: 'artists' }
     ]
   }
 

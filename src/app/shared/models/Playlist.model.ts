@@ -8,5 +8,6 @@ export interface Song {
   _id: string;
   stationId: string;
   artist: string;
+  song: string;
   dateTimeEntered: string;
 }

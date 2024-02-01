@@ -1,0 +1,48 @@
+<div class="details-container">
+  <div class="title">
+    {{ artist.name }}
+  </div>
+
+  <div class="details">
+    <div class="chart-container">
+      <div class="title">Daily Plays</div>
+      <div class="chart">
+        <app-bar-chart-horizontal
+          [data]="totalPlays"
+          yAxisLabel="Plays"
+          xAxisLabel="Songs"
+        ></app-bar-chart-horizontal>
+      </div>
+    </div>
+    <div class="chart-container">
+      <div class="title">Weekly Plays</div>
+      <div class="chart">
+        <app-bar-chart-horizontal
+          [data]="totalPlays"
+          yAxisLabel="Plays"
+          xAxisLabel="Songs"
+        ></app-bar-chart-horizontal>
+      </div>
+    </div>
+    <div class="chart-container">
+      <div class="title">Monthly Plays</div>
+      <div class="chart">
+        <app-bar-chart-horizontal
+          [data]="totalPlays"
+          yAxisLabel="Plays"
+          xAxisLabel="Songs"
+        ></app-bar-chart-horizontal>
+      </div>
+    </div>
+    <div class="chart-container">
+      <div class="title">Yearly Plays</div>
+      <div class="chart">
+        <app-bar-chart-horizontal
+          [data]="totalPlays"
+          yAxisLabel="Plays"
+          xAxisLabel="Songs"
+        ></app-bar-chart-horizontal>
+      </div>
+    </div>
+  </div>
+</div>

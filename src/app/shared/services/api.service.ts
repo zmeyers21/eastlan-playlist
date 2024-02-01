@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Station } from '../models/Station.model';
 import { Song } from '../models/Playlist.model';
+import { Artist } from '../models/Artist.model';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,17 @@ export class ApiService {
   // Playlist Methods
   getPlaylist(stationId: string, count: number): Observable<Song[]> {
     const url = `${this.baseUrl}/playlist/${stationId}/${count}`;
+    return this.get(url);
+  }
+
+  // Artist Methods
+  getAllArtists(): Observable<Artist[]> {
+    const url = `${this.baseUrl}/artists`;
+    return this.get(url);
+  }
+
+  getArtist(artistId: string): Observable<Artist> {
+    const url = `${this.baseUrl}/artists/${artistId}`;
     return this.get(url);
   }
 

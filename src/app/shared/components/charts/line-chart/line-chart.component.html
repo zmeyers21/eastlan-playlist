@@ -1,5 +1,5 @@
 <div class="w-pct-100 h-pct-100">
-  <ngx-charts-bar-vertical-2d
+  <ngx-charts-line-chart
     [results]="data"
     [view]="view"
     [scheme]="colorScheme"
@@ -24,9 +24,6 @@
     [xAxisTickFormatting]="formatString"
     [yAxisTickFormatting]="formatNumber"
     [yAxisTicks]="yAxisTicks"
-    [showDataLabel]="showDataLabel"
-    [barPadding]="barPadding"
-    [tooltipDisabled]="tooltipDisabled"
-    [roundEdges]="roundEdges">
-  </ngx-charts-bar-vertical-2d>
+    [tooltipDisabled]="tooltipDisabled">
+  </ngx-charts-line-chart>
 </div>

@@ -7,6 +7,7 @@ import { BarChartHorizontalComponent } from './components/charts/bar-chart-horiz
 import { BarChartHorizontalMultiComponent } from './components/charts/bar-chart-horizontal-multi/bar-chart-horizontal-multi.component';
 import { BarChartVerticalMultiComponent } from './components/charts/bar-chart-vertical-multi/bar-chart-vertical-multi.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { LineChartComponent } from './components/charts/line-chart/line-chart.component';
 
 
 
@@ -17,7 +18,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     BarChartVerticalComponent,
     BarChartHorizontalComponent,
     BarChartHorizontalMultiComponent,
-    BarChartVerticalMultiComponent
+    BarChartVerticalMultiComponent,
+    LineChartComponent,
   ],
   exports: [
     HeaderComponent,
@@ -25,7 +27,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     BarChartVerticalComponent,
     BarChartHorizontalComponent,
     BarChartHorizontalMultiComponent,
-    BarChartVerticalMultiComponent
+    BarChartVerticalMultiComponent,
+    LineChartComponent,
   ],
   imports: [
     CommonModule,

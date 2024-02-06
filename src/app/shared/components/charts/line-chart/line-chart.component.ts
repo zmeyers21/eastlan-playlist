@@ -2,21 +2,20 @@ import { Component, Input } from '@angular/core';
 import { Color, LegendPosition, ScaleType } from '@swimlane/ngx-charts';
 
 @Component({
-  selector: 'app-bar-chart-horizontal-multi',
-  templateUrl: './bar-chart-horizontal-multi.component.html',
-  styleUrls: ['./bar-chart-horizontal-multi.component.scss']
+  selector: 'app-line-chart',
+  templateUrl: './line-chart.component.html',
+  styleUrls: ['./line-chart.component.scss'],
 })
-export class BarChartHorizontalMultiComponent {
-
+export class LineChartComponent {
   // data
   @Input() data: any[];
 
   // options
-  @Input() legendTitle: string = 'Time Blocks';
-  legendPosition: LegendPosition = LegendPosition.Right; // ['right', 'below']
-  legend: boolean = true;
-  // view: [number, number] = [528, 320];
-  view: any;
+  @Input() legendTitle: string = 'FIX ME';
+  legendPosition: LegendPosition = LegendPosition.Below; // ['right', 'below']
+  legend: boolean = false;
+  view: [number, number] = [900, 450];
+  // view: any;
 
   xAxis: boolean = true;
   yAxis: boolean = true;
@@ -32,8 +31,8 @@ export class BarChartHorizontalMultiComponent {
   trimYAxisTicks: boolean = false;
   rotateXAxisTicks: boolean = true;
 
-  xAxisTicks: any[] = []
-  yAxisTicks: any[] = [0, 25, 50, 75, 100, 125, 150, 175, 200]
+  xAxisTicks: any[] = [];
+  yAxisTicks: any[] = [0, 25, 50, 75, 100, 125, 150, 175, 200];
 
   animations: boolean = true; // animations on load
   showGridLines: boolean = true; // grid lines
@@ -43,22 +42,21 @@ export class BarChartHorizontalMultiComponent {
     name: 'Schem 1',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#704FC4', '#4B852C', '#B67A3D', '#5B6FC8', '#25706F']
+    domain: ['#704FC4', '#4B852C', '#B67A3D', '#5B6FC8', '#25706F'],
   };
   schemeType: ScaleType = ScaleType.Ordinal; // 'ordinal' or 'linear'
 
-  activeEntries: any[] = ['book']
-  barPadding: number = 12
+  activeEntries: any[] = ['book'];
+  barPadding: number = 12;
   tooltipDisabled: boolean = false;
 
-  yScaleMax: number = 9000;
+  yScaleMax: number = 200;
 
   roundEdges: boolean = true;
 
-  constructor() {  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSelect(event: any) {
     console.log(event);
@@ -73,11 +71,10 @@ export class BarChartHorizontalMultiComponent {
   }
 
   formatString(input: string): string {
-    return input.toUpperCase()
+    return input.toUpperCase();
   }
 
   formatNumber(input: number): number {
-    return input
+    return input;
   }
-
 }

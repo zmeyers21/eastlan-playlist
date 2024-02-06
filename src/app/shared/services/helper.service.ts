@@ -26,8 +26,8 @@ export class HelperService {
     return 0;
   }
 
-  get randomId(): number {
-    return Math.floor(Math.random() * 100000000);
+  randomId(max: number): number {
+    return Math.floor(Math.random() * max);
   }
 
 }

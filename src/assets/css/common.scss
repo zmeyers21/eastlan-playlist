@@ -76,3 +76,7 @@ $pct: '%';
     height: #{$val}#{$pct} !important;
   }
 }
+
+.center {
+  text-align: center !important;
+}

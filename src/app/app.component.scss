@@ -1,4 +1,9 @@
 @use '@angular/material' as mat;
+.header-container,
+.footer-container {
+  width: 100%;
+}
+
 .body {
   height: calc(100vh - 96px);
 }

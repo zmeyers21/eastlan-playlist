@@ -26,8 +26,7 @@ export class ArtistComponent {
 
   artists: Artist[] = [];
   displayedColumns: string[] = [
-    'name',
-    'actions'
+    'name'
   ];
 
   constructor(private service: ArtistService,

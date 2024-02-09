@@ -1,22 +1,14 @@
 <!-- Artist List -->
 <div class="list" *ngIf="!loading">
 
-  <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]" [pageSize]="20" showFirstLastButtons></mat-paginator>
+  <mat-paginator [hidePageSize]="true" [pageSize]="50" showFirstLastButtons></mat-paginator>
 
   <table mat-table [dataSource]="dataSource">
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Artist Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-
-    <!-- Actions Column -->
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef class="w-150"></th>
-      <td mat-cell *matCellDef="let element">
-        <!-- <button mat-icon-button class="icon-button" (click)="edit(element)"><mat-icon>edit</mat-icon></button> -->
-      </td>
+      <th mat-header-cell *matHeaderCellDef class="center"> Artist Name </th>
+      <td mat-cell *matCellDef="let element" class="center"> {{element.name}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table-header-row"></tr>

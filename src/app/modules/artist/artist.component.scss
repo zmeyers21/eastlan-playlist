@@ -2,6 +2,18 @@
 @import url('/src/app/shared/styles/list.styles.scss');
 
 .list {
-  width: 600px;
   @include mat.elevation(3);
+}
+
+@media only screen and (max-width: 700px) {
+  .list {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 701px) {
+  .list {
+    width: 700px;
+    margin: 0 auto;
+  }
 }

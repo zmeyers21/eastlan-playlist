@@ -1,4 +1,10 @@
-<div class="header">
+<div class="header-lg">
+  <div class="tab" [ngClass]="{'active': isActiveTab(tab)}" *ngFor="let tab of tabs$" (click)="navigate(tab)">
+    {{ tab.title | titlecase }}
+  </div>
+</div>
+
+<div class="header-sm">
   <div class="tab" [ngClass]="{'active': isActiveTab(tab)}" *ngFor="let tab of tabs$" (click)="navigate(tab)">
     {{ tab.title | titlecase }}
   </div>

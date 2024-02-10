@@ -1,5 +1,3 @@
-import { Station } from "./Station.model";
-
 export interface Playlist {
   songs: Song[];
 }

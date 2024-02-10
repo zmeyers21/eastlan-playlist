@@ -11,33 +11,33 @@ export class LineChartComponent {
   @Input() data: any[];
 
   // options
-  @Input() legendTitle: string = 'FIX ME';
+  @Input() legendTitle = 'FIX ME';
   legendPosition: LegendPosition = LegendPosition.Below; // ['right', 'below']
-  legend: boolean = false;
+  legend = false;
   view: [number, number] = [900, 450];
   // view: any;
 
-  xAxis: boolean = true;
-  yAxis: boolean = true;
+  xAxis = true;
+  yAxis = true;
 
-  @Input() yAxisLabel: string = 'FIX ME';
-  @Input() xAxisLabel: string = 'FIX ME';
-  showXAxisLabel: boolean = true;
-  showYAxisLabel: boolean = true;
+  @Input() yAxisLabel = 'FIX ME';
+  @Input() xAxisLabel = 'FIX ME';
+  showXAxisLabel = true;
+  showYAxisLabel = true;
 
-  maxXAxisTickLength: number = 30;
-  maxYAxisTickLength: number = 30;
-  trimXAxisTicks: boolean = false;
-  trimYAxisTicks: boolean = false;
-  rotateXAxisTicks: boolean = true;
+  maxXAxisTickLength = 30;
+  maxYAxisTickLength = 30;
+  trimXAxisTicks = false;
+  trimYAxisTicks = false;
+  rotateXAxisTicks = true;
 
   xAxisTicks: any[] = [];
   yAxisTicks: any[] = [0, 25, 50, 75, 100, 125, 150, 175, 200];
 
-  animations: boolean = true; // animations on load
-  showGridLines: boolean = true; // grid lines
-  showDataLabel: boolean = false; // numbers on bars
-  gradient: boolean = false;
+  animations = true; // animations on load
+  showGridLines = true; // grid lines
+  showDataLabel = false; // numbers on bars
+  gradient = false;
   colorScheme: Color = {
     name: 'Schem 1',
     selectable: true,
@@ -47,16 +47,12 @@ export class LineChartComponent {
   schemeType: ScaleType = ScaleType.Ordinal; // 'ordinal' or 'linear'
 
   activeEntries: any[] = ['book'];
-  barPadding: number = 12;
-  tooltipDisabled: boolean = false;
+  barPadding = 12;
+  tooltipDisabled = false;
 
-  yScaleMax: number = 200;
+  yScaleMax = 200;
 
-  roundEdges: boolean = true;
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  roundEdges = true;
 
   onSelect(event: any) {
     console.log(event);

@@ -42,7 +42,7 @@ export class StationListComponent implements OnInit, AfterViewInit {
     this.loadStations();
   }
 
-  loadStations(stations?: Station[]): void {
+  loadStations(): void {
     this.loading = true;
     this.service.getAll().pipe(
       tap((stations) => console.log('stations: ', stations)),
@@ -65,7 +65,7 @@ export class StationListComponent implements OnInit, AfterViewInit {
   }
 
   edit(station: Station): void {
-
+    console.log('station: ', station);
   }
 
 

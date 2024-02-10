@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Song } from 'src/app/shared/models/Playlist.model';
 import { PlaylistService } from 'src/app/shared/services/playlist.service';
@@ -8,15 +8,11 @@ import { PlaylistService } from 'src/app/shared/services/playlist.service';
   templateUrl: './play-details.component.html',
   styleUrls: ['./play-details.component.scss']
 })
-export class PlayDetailsComponent implements OnInit {
+export class PlayDetailsComponent {
 
   constructor(private service: PlaylistService,
     private dialogRef: MatDialogRef<PlayDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public song: Song) { }
-
-  ngOnInit(): void {
-    
-  }
 
   close() {
     this.dialogRef.close();

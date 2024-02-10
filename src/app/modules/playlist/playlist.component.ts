@@ -47,7 +47,7 @@ export class PlaylistComponent implements OnInit, AfterViewInit {
     if (stationId) {
       this.loading = true;
       // TODO: allow user to select how many songs they want to view
-      this.service.getPlaylist(stationId).pipe(
+      this.service.getPlaylist(stationId, count).pipe(
         tap((songs) => console.log('songs: ', songs)),
         tap((songs) => this.songs = songs),
         tap(() => this.dataSource = new MatTableDataSource<Song>(this.songs)),

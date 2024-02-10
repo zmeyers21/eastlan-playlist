@@ -10,7 +10,7 @@ import { Artist } from '../models/Artist.model';
 })
 export class ApiService {
 
-  baseUrl: string = 'http://localhost:3000';
+  baseUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
@@ -31,7 +31,7 @@ export class ApiService {
   }
 
   // Playlist Methods
-  getPlaylist(stationId: string, count: number): Observable<Song[]> {
+  getPlaylist(stationId: string, count: string): Observable<Song[]> {
     const url = `${this.baseUrl}/playlist/${stationId}/${count}`;
     return this.get(url);
   }

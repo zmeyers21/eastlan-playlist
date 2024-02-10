@@ -8,6 +8,4 @@ export class TabService {
 
   activeTab: Tab;
 
-  constructor() { }
-
 }

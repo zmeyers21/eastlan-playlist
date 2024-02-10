@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -15,7 +15,7 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
   templateUrl: './artist.component.html',
   styleUrls: ['./artist.component.scss']
 })
-export class ArtistComponent {
+export class ArtistComponent implements OnInit, AfterViewInit {
 
   subs = new SubSink();
   loading: boolean;
@@ -37,7 +37,7 @@ export class ArtistComponent {
     this.loadStations();
   }
 
-  loadStations(artists?: Artist[]): void {
+  loadStations(): void {
     this.loading = true;
     this.service.getAll().pipe(
       tap((artists) => console.log('artists: ', artists)),
@@ -64,7 +64,7 @@ export class ArtistComponent {
   }
 
   edit(artist: Artist): void {
-
+    console.log('artist: ', artist);
   }
 
 }

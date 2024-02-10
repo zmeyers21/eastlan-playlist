@@ -13,8 +13,8 @@ export class PlaylistService {
 
   constructor(private apiService: ApiService) { }
 
-  getPlaylist(stationId: string, count?: number): Observable<Song[]> {
-    return this.apiService.getPlaylist(stationId, count || 1000);
+  getPlaylist(stationId: string, count?: string): Observable<Song[]> {
+    return this.apiService.getPlaylist(stationId, count || '1000');
   }
 
 }

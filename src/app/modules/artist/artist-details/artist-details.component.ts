@@ -14,10 +14,6 @@ export class ArtistDetailsComponent {
     private dialogRef: MatDialogRef<ArtistDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public artist: Artist) { }
 
-  ngOnInit(): void {
-    
-  }
-
   get totalPlays() {
     return totalPlays;
   }

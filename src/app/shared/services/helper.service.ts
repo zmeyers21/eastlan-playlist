@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class HelperService {
 
-  constructor() { }
-
   compare(a: any, b: any, field?: string) {
 
     if (field) {

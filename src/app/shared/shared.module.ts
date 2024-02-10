@@ -8,6 +8,11 @@ import { BarChartHorizontalMultiComponent } from './components/charts/bar-chart-
 import { BarChartVerticalMultiComponent } from './components/charts/bar-chart-vertical-multi/bar-chart-vertical-multi.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { LineChartComponent } from './components/charts/line-chart/line-chart.component';
+import { LoginButtonComponent } from './components/login-button/login-button.component';
+import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
+import { AuthenticationButtonComponent } from './components/authentication-button/authentication-button.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AuthNavComponent } from './components/auth-nav/auth-nav.component';
 
 
 
@@ -20,6 +25,11 @@ import { LineChartComponent } from './components/charts/line-chart/line-chart.co
     BarChartHorizontalMultiComponent,
     BarChartVerticalMultiComponent,
     LineChartComponent,
+    LoginButtonComponent,
+    LogoutButtonComponent,
+    AuthenticationButtonComponent,
+    AuthNavComponent,
+    NavBarComponent,
   ],
   exports: [
     HeaderComponent,
@@ -29,6 +39,11 @@ import { LineChartComponent } from './components/charts/line-chart/line-chart.co
     BarChartHorizontalMultiComponent,
     BarChartVerticalMultiComponent,
     LineChartComponent,
+    LoginButtonComponent,
+    LogoutButtonComponent,
+    AuthenticationButtonComponent,
+    AuthNavComponent,
+    NavBarComponent,
   ],
   imports: [
     CommonModule,

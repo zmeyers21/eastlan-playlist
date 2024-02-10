@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiService } from './api.service';
 import { Artist } from '../models/Artist.model';
-import { Song } from '../models/Playlist.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +19,7 @@ export class ArtistService {
   }
 }
 
-export var totalPlays = [
+export const totalPlays = [
   { name: 'Song 1', value: 123 },
   { name: 'Song 2', value: 87 },
   { name: 'Song 3', value: 34 },

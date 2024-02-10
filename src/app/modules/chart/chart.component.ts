@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavCard } from 'src/app/shared/models/NavCard.model';
 
 @Component({
@@ -6,19 +6,15 @@ import { NavCard } from 'src/app/shared/models/NavCard.model';
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss']
 })
-export class ChartComponent implements OnInit {
+export class ChartComponent {
 
   cards: NavCard[] = [
     { title: 'Top 40 Songs', route: 'top-40-songs' },
     { title: 'Top 40 Artists', route: 'top-40-artists' }
   ]
 
-  ngOnInit(): void {
-
-  }
-
   cardClick(card: NavCard): void {
-    
+    console.log('card: ', card);
   }
 
 }

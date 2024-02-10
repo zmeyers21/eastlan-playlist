@@ -12,33 +12,33 @@ export class BarChartHorizontalMultiComponent {
   @Input() data: any[];
 
   // options
-  @Input() legendTitle: string = 'Time Blocks';
+  @Input() legendTitle = 'Time Blocks';
   legendPosition: LegendPosition = LegendPosition.Right; // ['right', 'below']
-  legend: boolean = true;
+  legend = true;
   // view: [number, number] = [528, 320];
   view: any;
 
-  xAxis: boolean = true;
-  yAxis: boolean = true;
+  xAxis = true;
+  yAxis = true;
 
-  @Input() yAxisLabel: string = 'FIX ME';
-  @Input() xAxisLabel: string = 'FIX ME';
-  showXAxisLabel: boolean = true;
-  showYAxisLabel: boolean = true;
+  @Input() yAxisLabel = 'FIX ME';
+  @Input() xAxisLabel = 'FIX ME';
+  showXAxisLabel = true;
+  showYAxisLabel = true;
 
-  maxXAxisTickLength: number = 30;
-  maxYAxisTickLength: number = 30;
-  trimXAxisTicks: boolean = false;
-  trimYAxisTicks: boolean = false;
-  rotateXAxisTicks: boolean = true;
+  maxXAxisTickLength = 30;
+  maxYAxisTickLength = 30;
+  trimXAxisTicks = false;
+  trimYAxisTicks = false;
+  rotateXAxisTicks = true;
 
   xAxisTicks: any[] = []
   yAxisTicks: any[] = [0, 25, 50, 75, 100, 125, 150, 175, 200]
 
-  animations: boolean = true; // animations on load
-  showGridLines: boolean = true; // grid lines
-  showDataLabel: boolean = false; // numbers on bars
-  gradient: boolean = false;
+  animations = true; // animations on load
+  showGridLines = true; // grid lines
+  showDataLabel = false; // numbers on bars
+  gradient = false;
   colorScheme: Color = {
     name: 'Schem 1',
     selectable: true,
@@ -48,17 +48,12 @@ export class BarChartHorizontalMultiComponent {
   schemeType: ScaleType = ScaleType.Ordinal; // 'ordinal' or 'linear'
 
   activeEntries: any[] = ['book']
-  barPadding: number = 12
-  tooltipDisabled: boolean = false;
+  barPadding = 12
+  tooltipDisabled = false;
 
-  yScaleMax: number = 9000;
+  yScaleMax = 9000;
 
-  roundEdges: boolean = true;
-
-  constructor() {  }
-
-  ngOnInit(): void {
-  }
+  roundEdges = true;
 
   onSelect(event: any) {
     console.log(event);

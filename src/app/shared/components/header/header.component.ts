@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tab } from '../../models/Tab.model';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { SubSink } from 'subsink';
-import { tap } from 'rxjs';
 import { TabService } from '../../services/tab.service';
 
 @Component({

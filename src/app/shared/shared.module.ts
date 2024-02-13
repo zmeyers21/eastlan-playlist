@@ -13,6 +13,7 @@ import { LogoutButtonComponent } from './components/logout-button/logout-button.
 import { AuthenticationButtonComponent } from './components/authentication-button/authentication-button.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AuthNavComponent } from './components/auth-nav/auth-nav.component';
+import { MaterialModule } from '../core/modules/material.module';
 
 
 
@@ -47,7 +48,8 @@ import { AuthNavComponent } from './components/auth-nav/auth-nav.component';
   ],
   imports: [
     CommonModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }
